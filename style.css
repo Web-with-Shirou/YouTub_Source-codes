@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1f1a40;
+}
+
+.container{
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 30px;
+    min-width: 350px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+}
+
+.container ul li{
+    transition: 0.5s;
+    margin-right: 5px;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.container ul li span{
+    text-align: center;
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 50%;
+    max-width: 40px;
+    max-height: 40px;
+    z-index: 1000;
+}
+
+.container ul li:hover span{
+    background-color: var(--v);
+    color: white;
+}
+
+.container ul li.intro{
+    transform: translateY(-25px);
+}
+
+.container ul li.intro::before{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    left: -23px;
+    top: 0.2px;
+    border-radius: 50%;
+    box-shadow: 13px 14px white;
+}
+
+.container ul li.intro::after{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    right: -23px;
+    top: 0.2px;
+    border-radius: 50%;
+    box-shadow: -13px 14px white;
+}
+
+.container ul li.intro span{
+    background: var(--v);
+}
