@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="circle"></div>
+        <div class="imgbx">
+            <img src="sneak.png" alt="">
+        </div>
+        <div onclick="remevr()" class="togglebtn"></div>
+        <div class="content">
+            <div class="per">
+                <h2>Nike Sneakers</h2>
+                <a href="#" class="buybtn" onclick="addevr()">Buy now!</a>
+            </div>
+            <div class="op">
+                <h3>Colour</h3>
+                <ul class="col">
+                    <li style="--v:#00ff66"></li>
+                    <li style="--v:#f6ff00"></li>
+                    <li style="--v:#fff"></li>
+                    <li style="--v:#0008ff"></li>
+                </ul>
+                <h3>Size</h3>
+                <ul class="size">
+                    <li>38</li>
+                    <li>40</li>
+                    <li>42</li>
+                    <li>44</li>
+                    <li>46</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addevr(){
+            document.querySelector(".buybtn").style.display = 'none';
+            document.querySelector(".content").classList.add('active');
+            document.querySelector(".togglebtn").style.display = 'flex';
+        }
+
+        function remevr(){
+            document.querySelector(".buybtn").style.display = 'inline-block';
+            document.querySelector(".content").classList.remove('active');
+            document.querySelector(".togglebtn").style.display = 'none';
+        }
+    </script>
+</body>
+</html>
